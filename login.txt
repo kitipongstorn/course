@@ -1,0 +1,18 @@
+*** Settings ***
+Library    Selenium2Library
+Library    OperatingSystem
+
+*** Variables ***
+
+
+*** Testcases ***
+Facebook Login
+	Open Browser    https://www.facebook.com/
+	Maximize Browser Window
+	Input Text    email    
+	Input Text    pass    
+	Click Button    u_0_n
+	Click Link    navAccountLink
+	Click Element    xpath=//form[@id="logout_form"]/label/input
+
+*** Keywords ***
