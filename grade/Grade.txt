@@ -1,13 +1,12 @@
 *** Settings ***
 Library    Selenium2Library
-Library    OperatingSystem
 
 *** Variables ***
-
+${DEMO URL}    http://demo-jenkins-web.herokuapp.com/
 
 *** Testcases ***
 Score 80-100 get A
-	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Open Browser    ${DEMO URL}
 	Maximize Browser Window
 	Input Text    score    80   
 	Click Button    convert
@@ -15,7 +14,7 @@ Score 80-100 get A
 	Close Browser
 
 Score 70-79 get B
-	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Open Browser    ${DEMO URL}
 	Maximize Browser Window
 	Input Text    score    75   
 	Click Button    convert
@@ -23,7 +22,7 @@ Score 70-79 get B
 	Close Browser
 
 Score 60-69 get C
-	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Open Browser    ${DEMO URL}
 	Maximize Browser Window
 	Input Text    score    68   
 	Click Button    convert
@@ -31,7 +30,7 @@ Score 60-69 get C
 	Close Browser
 
 Score 50-59 get D
-	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Open Browser    ${DEMO URL}
 	Maximize Browser Window
 	Input Text    score    52   
 	Click Button    convert
@@ -39,7 +38,7 @@ Score 50-59 get D
 	Close Browser
 
 Score 0-49 get F
-	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Open Browser    ${DEMO URL}
 	Maximize Browser Window
 	Input Text    score    13   
 	Click Button    convert
