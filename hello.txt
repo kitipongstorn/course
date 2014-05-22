@@ -1,1 +1,16 @@
-Test!!!
+*** Settings ***
+Library    Selenium2Library
+Library    OperatingSystem
+
+*** Variables ***
+
+
+*** Testcases ***
+My First Test Case
+	#Set Environment Variable    webdriver.ie.driver    r:\course\IEDriverServer.exe
+	Open Browser    http://www.kcprofessional.com
+	Maximize Browser Window
+	Input Text    qrw    aaaaa
+	#Close Browser
+
+*** Keywords ***
